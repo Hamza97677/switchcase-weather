@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import inquirer from "inquirer";
 
 async function main() {
@@ -12,13 +13,13 @@ async function main() {
 
         switch (weather.userweather.toLowerCase()) {
             case "cold":
-                console.log("Please be safe, it's so cold outside.");
+                console.log(chalk.red.bold.italic("Please be safe, it's so cold outside."));
                 break;
             case "sunny":
-                console.log("Wear sunglasses, it's a sunny day!");
+                console.log(chalk.yellow.bold.italic("Wear sunglasses, it's a sunny day!"));
                 break;
             case "rainy":
-                console.log("Rain expected, please stay safe at home.");
+                console.log(chalk.green.bold.italic("Rain expected, please stay safe at home."));
                 break;
             default:
                 console.log("Please select a correct weather type.");
